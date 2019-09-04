@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React 101</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+    <script type="text/babel">
+
+        function getName() {
+            return "Yo this is wild.."
+        }
+
+        const levi = "https://media.tenor.com/images/2da844ee3aeafaf36512f750518933c4/tenor.gif";
+        //  ReactDOM.render takes 2 args:
+        //  1. What
+        //  1b. You can provide ONE, and only ONE element.
+        // That element can have a zillion children.
+        // 2. Where
+        ReactDOM.render(
+            <div>
+                <h1>I love you {60*50}! {getName()}</h1>
+                <img src={levi}/>
+            </div>,
+            document.getElementById('root')
+        )
+    </script>
+</body>
+</html>
